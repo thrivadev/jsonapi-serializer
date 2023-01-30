@@ -1,6 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: "bundler"
     directory: "/"
+    # Required to fetch dependencies from our private gem server,
+    # see https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates#insecure-external-code-execution.
+    # This is safe as we are fetching gems from our own private registry.
+    insecure-external-code-execution: allow
+    # "open-pull-requests-limit" only applies to auto-updates, and not security
+    # updates. A limit of 0, ensures that dependabot only raises PRs for security
+    # updates.
+    # ref: https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates#open-pull-requests-limit:
+    open-pull-requests-limit: 0
+    reviewers:
+      - "thrivadev/platform"
     schedule:
-      interval: "weekly"
+      interval: "daily"
