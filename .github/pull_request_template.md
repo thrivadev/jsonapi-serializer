@@ -11,4 +11,4 @@ Have a read of our [Pull Request Guide](https://github.com/thrivadev/cookbook/bl
 
 ### Required software development lifecycle checks
 
-- [ ] Changes adhere to the [Secure Software Development Policy](https://docs.google.com/document/d/1erQ5DDuLhBhTP9FAFCdQCq9Q_4c0Tiir/)
+By merging this PR you confirm that changes adhere to Thriva's (THR-10140) Secure Software Development Policy. Please refer to [Thriva's Document Management System](https://www.notion.so/thriva/39dc79dc1afe4bad905adacb08af097d?v=fe4f1b5e3c7f427f8e56192aca09033a) for the latest approved version.
