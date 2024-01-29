@@ -1,11 +1,5 @@
 name: Task list checks
 
-# Don't run multiple task list checks for the same
-# PR if boxes are checked in quick succession if we can help it.
-concurrency:
-  group: task-list-${{ github.ref }}
-  cancel-in-progress: true
-
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
@@ -13,9 +7,5 @@ on:
 jobs:
   check-all-tasks-completed:
     name: 'All tasks completed'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check for incomplete task list items
-        uses: Shopify/task-list-checker@main
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+    uses: thrivadev/shared-workflows/.github/workflows/arc-task-list-check.yml@main
+    secrets: inherit
