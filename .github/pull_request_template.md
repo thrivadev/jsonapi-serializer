@@ -7,7 +7,7 @@
 -
 
 ---
-Have a read of our [Pull Request Guide](https://github.com/thrivadev/cookbook/blob/master/guides/pull-request-guide.md) for tips and tricks on writing pull requests at Thriva.
+Have a read of our [Pull Request Guide](https://github.com/thrivadev/cookbook/blob/main/guides/pull-request-guide.md) for tips and tricks on writing pull requests at Thriva.
 
 ### Required software development lifecycle checks
 
