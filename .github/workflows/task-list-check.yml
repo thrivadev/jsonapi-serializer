@@ -1,8 +1,6 @@
 name: Task list checks
 
-on:
-  pull_request:
-    types: [opened, edited, synchronize, reopened]
+on: pull_request
 
 jobs:
   check-all-tasks-completed:
